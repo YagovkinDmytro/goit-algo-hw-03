@@ -39,8 +39,9 @@ def main():
         if path_to_directory.exists() and path_to_directory.is_dir():
             directory = Path(path_to_directory)
             copy_of_files(directory, new_directory_path)
-            list_of_folder(new_directory_path)
             print(f"{Fore.YELLOW}📁 '{path_to_directory.name}' has been copied into 📁 '{new_directory_path.name}'")
+            print(f"{Fore.YELLOW}📁 {new_directory_path.name}")
+            list_of_folder(new_directory_path)
         else:
             print(f"{Fore.RED}The directory path is invalid or does not exist: {path_to_directory}")
     else:
